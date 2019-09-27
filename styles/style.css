@@ -139,6 +139,7 @@ body {
     line-height: 20px;
     text-decoration: none;
     border-bottom: 1px solid transparent;
+    transition: .3s ease-out;
 }
 
 .desc__text:hover  {
@@ -216,6 +217,7 @@ body {
     text-transform: uppercase;
     color: #fff;
     border-bottom: 1px solid transparent;
+    transition: .3s ease-out;
 }
 
 .main-screen__header:hover {
@@ -230,6 +232,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .16em;
+    transition: .3s ease-out;
 }
 
 .main-screen__view-more:hover {
@@ -301,6 +304,7 @@ body {
     letter-spacing: .14em;
     border-radius: 50px;
     line-height: 22px;
+    transition: .3s ease-out;
 }
 
 .button:hover {
