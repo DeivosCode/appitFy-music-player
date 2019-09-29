@@ -29,6 +29,10 @@ body {
     width: 15%;
 }
 
+.logo-text {
+    padding-left: 40px;
+}
+
 .menu__logo {
     padding-left: 24px;
     padding-bottom: 18px;
@@ -324,16 +328,18 @@ body {
     max-width: 185px;
     padding: 0 8px 30px;
     cursor: pointer;
+    transition: .3s ease-out;
 }
 
 .album-img {
     width: 185px;
     height: 185px;
     position: relative;
+    border-radius: 5%;
+    transition: .3s ease-out;
 }
 
 .album-img--gradient:after {
-    background: linear-gradient(to top, rgb(156, 72, 167, .5) 0%, rgba(0, 0, 0, 0.1));
     content: '';
     display: block;
     height: 100%;
@@ -343,15 +349,23 @@ body {
     width: 100%;
 }
 
-.album-img--gradient--1:after {
+.album-img:hover {
+    transform: scale(1.1);
+}
+
+.album-img--gradient:hover::after {
+    background: linear-gradient(to top, rgb(156, 72, 167, .5) 0%, rgba(0, 0, 0, 0.1));
+}
+
+.album-img--gradient--1:hover:after {
     background: linear-gradient(to top, rgba(72, 78, 167, 0.5) 0%, rgba(0, 0, 0, 0.1));
 }
 
-.album-img--gradient--3:after {
+.album-img--gradient--3:hover:after {
     background: linear-gradient(to top, rgba(91, 167, 72, 0.5) 0%, rgba(0, 0, 0, 0.1));
 }
 
-.album-img--gradient--6:after {
+.album-img--gradient--6:hover:after {
     background: linear-gradient(to top, rgba(185, 233, 141, 0.5) 0%, rgba(0, 0, 0, 0.1));
 }
 
@@ -362,4 +376,158 @@ body {
     font-size: 14px;
     margin: 12px 0 4px;
     display: block;
+}
+
+.logo-eye {
+    position: absolute;
+    top: 50px!important;
+    left: 35%;
+}
+
+.wrapper {
+    position: absolute;
+    top: 55%;
+    /* left: 25%; */
+
+    /* width: 45px; */
+
+    display: flex;
+    justify-content: space-between;
+    
+    transform: translate(-50%, -50%);
+    transform: translate3d(-50%, -70%, 0);
+
+}
+
+.eye {
+    position: relative;
+
+    width: 20px;
+    height: 10px;
+    
+    background-color: #fff;
+    border-radius: 50%;
+    animation: eye 3.5s infinite;
+    transition: all .3s ease-out;
+}
+
+.eye:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.eye:hover:after {
+    background: #fff;
+}
+
+.eye:after {
+    content: '';
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    width: 25%;
+    height: 25%;
+
+    background: #000;
+    border-radius: 50%;
+    
+    transform: translate3d(-50%, -50%, 0);
+    animation: eyes 17.5s infinite;
+}
+
+.logo-eye--anim:after {
+    animation: logo-eyes 17.5s infinite;
+}
+
+@keyframes logo-eyes {
+    0%,
+    5%,
+    30%,
+    37%,
+    100%
+    {
+        height: 20px;
+        transform: translate3d(0, 0, 0);
+    }
+    3%,
+    33%
+    {
+        height: 0;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@keyframes logo-eyes {
+    0%,
+    20%
+    {
+        transform: translate3d(0, -50%, 0)
+    }
+
+    21%,
+    40%,
+    81%,
+    100%
+    {
+        transform: translate3d(-50%, 100%, 0) 
+    }
+
+    41%,
+    60%
+    {
+        transform: translate3d(0, -50%, 0)
+    }
+
+    61%,
+    80%
+    {
+        transform: translate3d(-50%, 100%, 0)
+    }
+}
+
+@keyframes eye {
+    0%,
+    5%,
+    30%,
+    37%,
+    100%
+    {
+        height: 20px;
+        transform: translate3d(0, 0, 0);
+    }
+    3%,
+    33%
+    {
+        height: 0;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@keyframes eyes {
+    0%,
+    20%
+    {
+        transform: translate3d(0, -50%, 0)
+    }
+
+    21%,
+    40%,
+    81%,
+    100%
+    {
+        transform: translate3d(-50%, -150%, 0) 
+    }
+
+    41%,
+    60%
+    {
+        transform: translate3d(0, -50%, 0)
+    }
+
+    61%,
+    80%
+    {
+        transform: translate3d(-50%, -150%, 0)
+    }
 }
