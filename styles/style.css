@@ -11,14 +11,14 @@ body {
 
 .menu {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-flow: row wrap;
     width: 30vh;
     background: #000;
     position: fixed;
     top: 0;
     left: 0;
-    height: 85vh;
+    height: 87vh;
     align-items: flex-start;
     align-content: flex-start;
     min-height: 0;
@@ -30,7 +30,7 @@ body {
 }
 
 .logo-text {
-    padding-left: 40px;
+    padding-left: 50px;
 }
 
 .menu__logo {
@@ -48,6 +48,9 @@ body {
     align-items: flex-start;
     align-content: center;
     flex-flow: column wrap;
+    position: absolute;
+    top: 10%;
+    left: 0;
 }
 
 .menu__icon {
@@ -83,7 +86,7 @@ body {
     text-decoration: none;
     color: #000;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 2px;
     padding: 8px;
 }
@@ -160,7 +163,7 @@ body {
 }
 
 .main-screen {
-    padding: 20px 0 0 228px;
+    padding: 20px 0 0 30vh;
     overflow: auto;
     height: 74vh;
     padding-bottom: 20px;
@@ -293,7 +296,7 @@ body {
 
 .color-sign-up__button {
     margin-left: 24px;
-    padding: 8px 0 12px 0;
+    padding: 8px 10px 12px 0;
 }
 
 .button {
@@ -309,6 +312,7 @@ body {
     border-radius: 50px;
     line-height: 22px;
     transition: .3s ease-out;
+    outline: none;
 }
 
 .button:hover {
@@ -321,12 +325,12 @@ body {
     align-items: center;
     flex-flow: row wrap;
     text-align: center;
-    padding: 0 22px;
+    padding: 0 22px 22px;
 }
 
 .box {
     max-width: 185px;
-    padding: 0 8px 30px;
+    padding: 0 8px 30px 0;
     cursor: pointer;
     transition: .3s ease-out;
 }
@@ -355,6 +359,7 @@ body {
 
 .album-img--gradient:hover::after {
     background: linear-gradient(to top, rgb(156, 72, 167, .5) 0%, rgba(0, 0, 0, 0.1));
+    border-radius: 5%;
 }
 
 .album-img--gradient--1:hover:after {
@@ -412,11 +417,11 @@ body {
 }
 
 .eye:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(247, 122, 122);
 }
 
 .eye:hover:after {
-    background: #fff;
+    background: #000;
 }
 
 .eye:after {
@@ -529,5 +534,254 @@ body {
     80%
     {
         transform: translate3d(-50%, -150%, 0)
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .logo-eye {
+        top: 50px!important;
+        left: 32%;
+    }
+
+    .menu__reg {
+        height: 30%;
+    }
+
+    .main-screen {
+        padding: 20px 0 0 25vh;
+    }
+
+    .menu {
+        width: 25vh;
+        height: 86.5vh;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .main-screen__nav {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .main-screen__header-window {
+        margin-top: 0;
+    }
+
+    .menu {
+        width: 25vh;
+        height: 86.5vh;
+    }
+
+    .main-screen {
+        padding: 20px 0 0 25vh;
+    }
+
+    .menu__reg {
+        height: 45%;
+    }
+
+    .logo-text {
+        padding-left: 45px;
+    }
+
+    .logo-eye {
+        top: 65px!important;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        padding: 5px 15px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    .menu__reg {
+        height: 30%;
+    }
+
+    .main-screen {
+        height: 85vh;
+        padding: 20px 0 0 25vh;
+    }
+
+    .logo-text {
+        padding-left: 45px;
+    }
+
+    .logo-eye {
+        top: 55px!important;
+        left: 35%;
+    }
+
+    .main-screen__link {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .menu__reg {
+        height: 15%;
+    }
+}
+
+@media screen and (max-height: 768px) {
+    .logo-eye {
+        top: 50px!important;
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .main-screen__link {
+        margin: 2px;
+    }
+
+    .menu {
+        width: 20vh;
+        height: 80vh;
+    }
+
+    .menu__nav {
+        top: 15%;
+    }
+
+    .main-screen {
+        height: 75vh;
+        padding: 20px 0 0 20vh;
+    }
+
+    .menu__reg {
+        height: 45%;
+    }
+
+    .main-screen__link, .nav__item {
+        font-size: 10px
+    }
+
+    .menu__buttons {
+        width: 12vh;
+    }
+
+    .menu__logo {
+        padding-left: 5px;
+    }
+
+    .menu__logo--img {
+        width: 25%;
+    }
+
+    .logo-eye {
+        left: 40%;
+    }
+
+    .logo-text {
+        padding-left: 35px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .logo-text {
+        padding-left: 30px;
+    }
+
+    .menu__logo {
+        padding-left: 5px;
+    }
+
+    .logo-eye {
+        left: 42%;
+    }
+
+    .menu__reg {
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-screen__link, .nav__item {
+        font-size: 8px;
+    }
+    
+    .menu__button {
+        font-size: 8px;
+    }
+
+    .album-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .text-h--p {
+        font-size: 8px;
+    }
+
+    .menu {
+        height: 75vh;
+    }
+}
+
+@media screen and (max-height: 414px) {
+    .menu {
+        width: 40vh;
+    }
+
+    .main-screen {
+        height: 56vh;
+        padding: 20px 0 0 40vh;
+    }
+
+    .main-screen__table {
+        justify-content: space-around;
+    }
+
+    .menu__nav {
+        top: 20%;
+    }
+
+    .logo-eye {
+        left: 45%;
+    }
+
+    .menu__reg {
+        display: none;
+    }
+
+    .main-screen__link {
+        font-size: 7px;
+    }
+
+    .nav__item {
+        font-size: 10px;
+    }
+
+    .menu__logo--img {
+        width: 20%;
+    }
+
+    .menu__logo {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-height: 320px) {
+    .logo-text {
+        padding-left: 32px;
+    }
+    .fa, .fas {
+        font-size: 15px;
+    }
+
+    .menu__nav {
+        display: block;
+    }
+
+    .main-screen__link {
+        margin: 3px;
     }
 }
